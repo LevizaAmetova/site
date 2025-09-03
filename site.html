@@ -1,1 +1,199 @@
+<!DOCTYPE html>
+<html>
+<title>Код шаблона 'Кафе'</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="Description" content="Пример шаблона для сайта 'Кафе' | Schoolsw3.com" />
+<link rel="stylesheet" href="/w3css/4/w3.css">
+<link href="https://fonts.googleapis.com/css?family=Jura|Neucha|Open+Sans+Condensed:300" rel="stylesheet">
+<style>
+body, html {
+    height: 100%;
+    font-family: font-family: 'Neucha', cursive;
+    font-family: 'Jura', sans-serif;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+.bgimg {
+    background-position: center;
+    background-size: cover;
+    background-image: url("/w3images/coffeehouse.jpg");
+    min-height: 75%;
+}
+.menu {
+    display: none;
+}
+</style>
+<body>
 
+<!-- Ссылки (сидеть сверху) -->
+<div class="w3-top">
+  <div class="w3-row w3-padding w3-black">
+    <div class="w3-col s3">
+      <a href="#" class="w3-button w3-block w3-black">ГЛАВНАЯ</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#about" class="w3-button w3-block w3-black">О НАС</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#menu" class="w3-button w3-block w3-black">МЕНЮ</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#where" class="w3-button w3-block w3-black">ГДЕ</a>
+    </div>
+  </div>
+</div>
+
+<!-- Заголовок с изображением -->
+<header class="bgimg w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-bottomleft w3-center w3-padding-large w3-hide-small">
+    <span class="w3-tag">Открыто с 6 утра до 5 вечера</span>
+  </div>
+  <div class="w3-display-middle w3-center">
+    <span class="w3-text-white" style="font-size:90px">Название<br>Кафе</span>
+  </div>
+  <div class="w3-display-bottomright w3-center w3-padding-large">
+    <span class="w3-text-white">Улица Ленина 15</span>
+  </div>
+</header>
+
+<!-- Добавление цвета фона и большого текста на всю страницу -->
+<div class="w3-sand w3-grayscale w3-large">
+
+<!-- Контейнер О Нас -->
+<div class="w3-container" id="about">
+  <div class="w3-content" style="max-width:700px">
+    <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">О НАШЕМ КАФЕ</span></h5>
+    <p>Кафе было основано в blabla by Mr. Smith in lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <p>In addition to our full espresso and brew bar menu, we serve fresh made-to-order breakfast and lunch sandwiches, as well as a selection of sides and salads and other good stuff.</p>
+    <div class="w3-panel w3-leftbar w3-light-grey">
+      <p><i>"Use products from nature for what it's worth - but never too early, nor too late." Fresh is the new sweet.</i></p>
+      <p>Chef, Coffeeist and Owner: Liam Brown</p>
+    </div>
+    <img src="/w3images/coffeeshop.jpg" style="width:100%;max-width:1000px" class="w3-margin-top">
+    <p><strong>Часы работы:</strong> ежедневно с 6 утра до 5 вечера.</p>
+    <p><strong>Адрес:</strong> Улица Ленина 15, ПЕРМЬ</p>
+  </div>
+</div>
+
+<!-- Контейнер Меню -->
+<div class="w3-container" id="menu">
+  <div class="w3-content" style="max-width:700px">
+ 
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">МЕНЮ</span></h5>
+  
+    <div class="w3-row w3-center w3-card w3-padding">
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Eat');" id="myLink">
+        <div class="w3-col s6 tablink">Есть</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Drinks');">
+        <div class="w3-col s6 tablink">Пить</div>
+      </a>
+    </div>
+
+    <div id="Eat" class="w3-container menu w3-padding-48 w3-card">
+      <h5>Хлебная Корзина</h5>
+      <p class="w3-text-grey">Ассортимент хлеба и кексов и кексы 5.50</p><br>
+    
+      <h5>Мед, миндаль, мюсли с фруктами</h5>
+      <p class="w3-text-grey">Натуральные хлопья из меда поджаренный овес, изюм, миндаль и финики 7.00</p><br>
+    
+      <h5>Бельгийские Вафли</h5>
+      <p class="w3-text-grey">Ванильное тесто с солодовой мукой 7.50</p><br>
+    
+      <h5>Яичница</h5>
+      <p class="w3-text-grey">Яичница, жареный красный перец и чеснок с зеленым луком 7.50</p><br>
+    
+      <h5>Блинчики с Черникой</h5>
+      <p class="w3-text-grey">С сиропом, маслом и большим количеством ягод 8.50</p>
+    </div>
+
+    <div id="Drinks" class="w3-container menu w3-padding-48 w3-card">
+      <h5>Кофе</h5>
+      <p class="w3-text-grey">Обычный кофе 2.50</p><br>
+    
+      <h5>Шоколад</h5>
+      <p class="w3-text-grey">Шоколадный эспрессо с молоком 4.50</p><br>
+    
+      <h5>Корретто</h5>
+      <p class="w3-text-grey">Виски и кофе 5.00</p><br>
+    
+      <h5>Холодный чай</h5>
+      <p class="w3-text-grey">Горячий чай, кроме холодного 3.00</p><br>
+    
+      <h5>Лимонад</h5>
+      <p class="w3-text-grey">Кока, Спрайт, Фанта, и т.д. 2.50</p>
+    </div>  
+    <img src="/w3images/coffeehouse2.jpg" style="width:100%;max-width:1000px;margin-top:32px;">
+  </div>
+</div>
+
+<!-- Контейнер Контакт / Зоны -->
+<div class="w3-container" id="where" style="padding-bottom:32px;">
+  <div class="w3-content" style="max-width:700px">
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">ГДЕ НАС НАЙТИ</span></h5>
+    <p>Найди нас по какому-нибудь адресу в каком-нибудь месте.</p>
+    <div id="googleMap" class="w3-sepia" style="width:100%;height:400px;"></div>
+    <p><span class="w3-tag">К ВАШЕМУ СВЕДЕНИЮ!</span> Мы предлагаем полный комплекс услуг по организации питания для любого мероприятия, большого или малого.
+	Мы понимаем ваши потребности, и мы будем обслуживать пищу, чтобы удовлетворить самые большие критерии из них всех, как внешний вид и вкус.</p>
+    <p><strong>Резервная</strong> таблица, просит сегодняшнее специальное предложение или просто отправить нам сообщение:</p>
+    <form action="/action_page.php" target="_blank">
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Имя" required name="Name"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="number" placeholder="Сколько людей" required name="People"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="datetime-local" placeholder="Дата и время" required name="date" value="2018-11-16T20:00"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Сообщение \ особые требования" required name="Message"></p>
+      <p><button class="w3-button w3-black" type="submit">ОТПРАВИТЬ СООБЩЕНИЕ</button></p>
+    </form>
+  </div>
+</div>
+
+<!-- Конец страницы содержания -->
+</div>
+
+<!-- Подвал -->
+<footer class="w3-center w3-light-grey w3-padding-48 w3-large">
+  <p>Работает на <a href="https://schoolsw3.com/w3css/index.php" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+</footer>
+
+<!-- Подключение Google Карты -->
+<script>
+function myMap()
+{
+  myCenter=new google.maps.LatLng(58.0104,56.2294, 58.0228,56.2294);
+  var mapOptions= {
+    center:myCenter,
+    zoom:12, scrollwheel: false, draggable: false,
+    mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+  var map=new google.maps.Map(document.getElementById("googleMap"),mapOptions);
+
+  var marker = new google.maps.Marker({
+    position: myCenter,
+  });
+  marker.setMap(map);
+}
+
+// Меню с Вкладками
+function openMenu(evt, menuName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("menu");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+     tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-dark-grey";
+}
+document.getElementById("myLink").click();
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBt7gH6jWFw94MXPvCGQg4lE23FlE5c8Vg&callback=myMap"></script>
+<!--
+Чтобы использовать этот код на своем веб-сайте, получите бесплатный ключ API от Google.
+Подробнее на: https://schoolsw3.com/graphics/google_maps_basic.php
+https://developers.google.com/maps/documentation/javascript/get-api-key
+-->
+
+</body>
+</html>
